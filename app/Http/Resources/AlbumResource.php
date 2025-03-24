@@ -14,6 +14,7 @@ class AlbumResource extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
+            'votes' => $this->votes,
             'artist' => $this->artist,
             'cover' => $this->cover,
             'created_at' => $this->created_at,
