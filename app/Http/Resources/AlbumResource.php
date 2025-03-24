@@ -17,6 +17,9 @@ class AlbumResource extends JsonResource
             'votes' => $this->votes,
             'artist' => $this->artist,
             'cover' => $this->cover,
+            'upvotes' => $this->votes->where('value', 'upvote')->count(),
+            'downvotes' => $this->votes->where('value', 'downvote')->count(),
+            'total_votes' => $this->votes->count(),
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ];

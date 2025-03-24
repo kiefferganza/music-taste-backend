@@ -16,9 +16,8 @@ class VoteResource extends JsonResource
             'user_id' => $this->user_id,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
-
             'album_id' => $this->album_id,
-
+            'value' => $this->value,
             'album' => new AlbumResource($this->whenLoaded('album')),
         ];
     }
