@@ -15,7 +15,7 @@ class AlbumFactory extends Factory
         return [
             'name' => $this->faker->name(),
             'artist' => $this->faker->word(),
-            'cover' => $this->faker->image(),
+            'cover' => 'https://picsum.photos/seed/picsum/200/300',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ];
