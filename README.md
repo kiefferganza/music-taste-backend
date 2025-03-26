@@ -6,7 +6,7 @@ Backend for voting albums for office music playlist
 
 ## Installation
 
-Install my-project with npm
+Install my-project with composer
 
 ```bash
   composer install
