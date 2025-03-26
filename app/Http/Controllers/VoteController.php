@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\VoteRequest;
+use App\Http\Resources\AlbumResource;
 use App\Http\Resources\VoteResource;
 use App\Models\Album;
 use App\Models\Vote;
@@ -18,10 +19,13 @@ class VoteController extends Controller
 
     public function store(Request $request,Album $album)
     {
-        return new VoteResource(Vote::updateOrCreate(
+
+       Vote::updateOrCreate(
             ['user_id' => Auth::id(), 'album_id' => $album->id],
             ['value' => $request->value]
-        ));
+        );
+
+        return new AlbumResource($album);
     }
 
     public function show(Vote $vote)

@@ -18,6 +18,9 @@ class VoteResource extends JsonResource
             'updated_at' => $this->updated_at,
             'album_id' => $this->album_id,
             'value' => $this->value,
+            'upvotes' => $this->upvotes,
+            'downvotes' => $this->downvotes,
+            'total_votes' => $this->count(),
             'album' => new AlbumResource($this->whenLoaded('album')),
         ];
     }
