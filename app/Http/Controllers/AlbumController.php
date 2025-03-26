@@ -24,7 +24,7 @@ class AlbumController extends Controller
         }
 
         // Ensure upvotes is treated as a numeric value, preventing NULL issues
-        $query = $query->orderBy('vote_count')
+        $query = $query->orderByDesc('vote_count')
             ->orderBy('name')
             ->paginate(10);
         return AlbumResource::collection($query);
