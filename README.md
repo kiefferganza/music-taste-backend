@@ -253,3 +253,6 @@ Authorization: Bearer your-auth-token
 This API is built using Laravel with Sanctum authentication. Ensure you have Laravel Sanctum properly configured in your project for authentication to work as expected.
 
 
+## Authors
+
+- [@kiefferganza](https://www.github.com/kiefferganza)
