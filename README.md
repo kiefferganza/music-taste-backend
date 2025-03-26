@@ -13,6 +13,7 @@ Install my-project with npm
   php artisan migrate
   php artisan db:seed --class=AdminSeeder
   php artisan db:seed 
+  php artisan serve
 ```
 
 
